@@ -1,6 +1,6 @@
 dmg Cookbook
 ============
-Lightweight resource and provider to install OS X applications (.app) from dmg files.
+Lightweight resource and provider to install OS X applications (.app) from dmg files.  Edited to support headers for dmg_package.  Originally intended to support chef cookbook java-mac but can be used for many instances
 
 
 Requirements
@@ -26,6 +26,7 @@ Optionally, the LWRP can install an "mpkg" or "pkg" package using installer(8).
 
 #### Parameter attributes:
 - `app` - This is the name of the application used by default for the /Volumes directory and the .app directory copied to /Applications.
+- `headers` - Request headers set when making the remote_file download to cache.  Default is {}.
 - `source` - remote URL for the dmg to download if specified. Default is nil.
 - `owner` - owner that should own the package installation.
 - `destination` - directory to copy the .app into. Default is /Applications.
