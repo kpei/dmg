@@ -19,6 +19,7 @@
 actions :install
 
 attribute :app, :kind_of => String, :name_attribute => true
+attribute :headers, :kind_of => Hash, :default => {}
 attribute :source, :kind_of => String, :default => nil
 attribute :owner, :kind_of => String, :default => nil
 attribute :destination, :kind_of => String, :default => "/Applications"
